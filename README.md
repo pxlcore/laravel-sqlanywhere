@@ -48,7 +48,7 @@ There is no separate package configuration file for LaravelODBC.  You'll just ad
 
 ```
 		'sqlanywhere' => array(
-            'host'        => 'tcpip{host=Carlos.bludata.local;port=2638}',
+            'host'        => 'tcpip{host=127.0.0.1;port=2638}',
             'username'    => 'teste-conexao',
             'password'    => 'teste',
             'database'    => 'teste-conexao',
