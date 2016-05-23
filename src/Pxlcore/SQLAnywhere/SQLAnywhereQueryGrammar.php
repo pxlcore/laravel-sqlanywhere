@@ -1,4 +1,4 @@
-<?php namespace Cagartner\SQLAnywhere;
+<?php namespace Pxlcore\SQLAnywhere;
 
 use Illuminate\Database\Query\Grammars\Grammar;
 use Illuminate\Database\Query\Builder;
@@ -10,17 +10,17 @@ class SQLAnywhereQueryGrammar extends Grammar {
 	 *
 	 * @var array
 	 */
-	protected $selectComponents = array(		
+	protected $selectComponents = array(
 		'limit',
 		'offset',
-		'aggregate',		
+		'aggregate',
 		'columns',
 		'from',
 		'joins',
 		'wheres',
 		'groups',
 		'havings',
-		'orders',		
+		'orders',
 		'unions',
 		'lock',
 	);

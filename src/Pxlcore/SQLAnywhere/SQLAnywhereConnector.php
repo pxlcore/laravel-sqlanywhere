@@ -1,4 +1,4 @@
-<?php namespace Cagartner\SQLAnywhere;
+<?php namespace Pxlcore\SQLAnywhere;
 
 use Illuminate\Database\Connectors\Connector;
 use Illuminate\Database\Connectors\ConnectorInterface;
@@ -30,10 +30,9 @@ class SQLAnywhereConnector extends Connector implements ConnectorInterface {
 		$autocommit = array_get($config, 'autocommit');
 		$persintent = array_get($config, 'persintent');
 
-
 		return new SQLAnywhereClient($this->getDsn($config), $autocommit, $persintent);
 	}
-	
+
 	/**
      * Create a DSN string from a configuration.
      *
@@ -49,10 +48,14 @@ class SQLAnywhereConnector extends Connector implements ConnectorInterface {
 
         // The database name needs to be in the connection string, otherwise it will
         // authenticate to the admin database, which may result in permission errors.
-        $dsn = "uid={$username};pwd={$password};ENG={$database};commlinks={$host}";
+        //
+        // Sample: UID=test;PWD=test;ENG=tlserv12;DBN=tl12;COMMLINKS=TCPIP{HOST=192.168.101.15:2638}
+        $dsn = "uid={$username};pwd={$password};dbn={$database};commlinks=tcpip{host={$host}:{$port}}";
         if (isset($charset)) {
             $dsn.= ";charset={$charset}";
         }
-        return $dsn;
+        if (isset($dbserver)) {
+            $dsn.= ";ENG={$dbserver}";
+        }
     }
 }

@@ -1,4 +1,4 @@
-<?php namespace Cagartner\SQLAnywhere;
+<?php namespace Pxlcore\SQLAnywhere;
 
 use Illuminate\Support\Fluent;
 use Illuminate\Database\Schema\Blueprint;

@@ -3,6 +3,3 @@ phpunit.phar
 /vendor
 composer.phar
 composer.lock
-*.sublime-project
-*.sublime-workspace
-*.project

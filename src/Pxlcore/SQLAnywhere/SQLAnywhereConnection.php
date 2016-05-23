@@ -1,4 +1,4 @@
-<?php namespace Cagartner\SQLAnywhere;
+<?php namespace Pxlcore\SQLAnywhere;
 
 use Illuminate\Database\Connection;
 use \Cagartner\SQLAnywhereClient;
