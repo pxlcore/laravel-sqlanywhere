@@ -49,7 +49,7 @@ class SQLAnywhereConnector extends Connector implements ConnectorInterface {
         // The database name needs to be in the connection string, otherwise it will
         // authenticate to the admin database, which may result in permission errors.
         //
-        // Sample: UID=test;PWD=test;ENG=tlserv12;DBN=tl12;COMMLINKS=TCPIP{HOST=192.168.101.15:2638}
+        // Sample: UID=test;PWD=test;ENG=dbserv;DBN=dbname;COMMLINKS=TCPIP{HOST=192.168.100.100:2638}
         $dsn = "uid={$username};pwd={$password};dbn={$database};commlinks=tcpip{host={$host}:{$port}}";
         if (isset($charset)) {
             $dsn.= ";charset={$charset}";
@@ -57,5 +57,7 @@ class SQLAnywhereConnector extends Connector implements ConnectorInterface {
         if (isset($dbserver)) {
             $dsn.= ";ENG={$dbserver}";
         }
+
+		return $dsn;
     }
 }
