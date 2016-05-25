@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Connectors\Connector;
 use Illuminate\Database\Connectors\ConnectorInterface;
-use \Cagartner\SQLAnywhereClient;
+use \Pxlcore\SQLAnywhereClient;
 
 class SQLAnywhereConnector extends Connector implements ConnectorInterface {
 

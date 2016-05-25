@@ -11,7 +11,7 @@ Adds an Sybase driver to Laravel 5, usable with Fluent and Eloquent.
 Installation
 ============
 
-Add `pxlcore\laravel-sqlanywhere` and `cagartner/sql-anywhere-client` as a requirement to composer.json:
+Add `pxlcore/laravel-sqlanywhere` and `cagartner/sql-anywhere-client` as a requirement to composer.json:
 
 ```javascript
 {

@@ -1,7 +1,7 @@
 <?php namespace Pxlcore\SQLAnywhere;
 
 use Illuminate\Database\Connection;
-use \Cagartner\SQLAnywhereClient;
+use \Pxlcore\SQLAnywhereClient;
 
 class SQLAnywhereConnection extends Connection {
 
