@@ -20,8 +20,8 @@ class SQLAnywhereServiceProvider extends ServiceProvider {
 	public function boot()
 	{
         $factory = $this->app['db'];
-        $factory->extend('sqlanywhere',function($config) {
-			if ( ! isset($config['prefix']))
+        $factory->extend('sqlanywhere', function($config) {
+			if ( ! isset($config['prefix']) )
 			{
 				$config['prefix'] = '';
 			}

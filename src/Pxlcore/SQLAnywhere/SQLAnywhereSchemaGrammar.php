@@ -27,7 +27,7 @@ class SQLAnywhereSchemaGrammar extends Grammar {
 	 */
 	public function compileTableExists()
 	{
-		return 'select * from sys.systab where table_type_str = ?';
+		return 'SELECT * FROM sys.systab WHERE table_type_str = ?';
 	}
 
 	/**
@@ -41,7 +41,7 @@ class SQLAnywhereSchemaGrammar extends Grammar {
 	{
 		$columns = implode(', ', $this->getColumns($blueprint));
 
-		return 'create table '.$this->wrapTable($blueprint)." ($columns)";
+		return 'CREATE TABLE '.$this->wrapTable($blueprint)." ($columns)";
 	}
 
 	/**
@@ -57,7 +57,7 @@ class SQLAnywhereSchemaGrammar extends Grammar {
 
 		$columns = $this->prefixArray('add', $this->getColumns($blueprint));
 
-		return 'alter table '.$table.' '.implode(', ', $columns);
+		return 'ALTER TABLE '.$table.' '.implode(', ', $columns);
 	}
 
 	/**
@@ -112,7 +112,7 @@ class SQLAnywhereSchemaGrammar extends Grammar {
 
 		$table = $this->wrapTable($blueprint);
 
-		return "alter table {$table} add {$type} {$command->index}($columns)";
+		return "ALTER TABLE {$table} ADD {$type} {$command->index}($columns)";
 	}
 
 	/**
@@ -124,7 +124,7 @@ class SQLAnywhereSchemaGrammar extends Grammar {
 	 */
 	public function compileDrop(Blueprint $blueprint, Fluent $command)
 	{
-		return 'drop table '.$this->wrapTable($blueprint);
+		return 'DROP TABLE '.$this->wrapTable($blueprint);
 	}
 
 	/**
@@ -136,7 +136,7 @@ class SQLAnywhereSchemaGrammar extends Grammar {
 	 */
 	public function compileDropIfExists(Blueprint $blueprint, Fluent $command)
 	{
-		return 'drop table if exists '.$this->wrapTable($blueprint);
+		return 'DROP TABLE IF EXISTS '.$this->wrapTable($blueprint);
 	}
 
 	/**
@@ -152,7 +152,7 @@ class SQLAnywhereSchemaGrammar extends Grammar {
 
 		$table = $this->wrapTable($blueprint);
 
-		return 'alter table '.$table.' '.implode(', ', $columns);
+		return 'ALTER TABLE '.$table.' '.implode(', ', $columns);
 	}
 
 	/**
@@ -164,7 +164,7 @@ class SQLAnywhereSchemaGrammar extends Grammar {
 	 */
 	public function compileDropPrimary(Blueprint $blueprint, Fluent $command)
 	{
-		return 'alter table '.$this->wrapTable($blueprint).' drop primary key';
+		return 'ALTER TABLE '.$this->wrapTable($blueprint).' drop primary key';
 	}
 
 	/**
@@ -220,7 +220,7 @@ class SQLAnywhereSchemaGrammar extends Grammar {
 	{
 		$from = $this->wrapTable($blueprint);
 
-		return "rename table {$from} to ".$this->wrapTable($command->to);
+		return "RENAME TABLE {$from} to ".$this->wrapTable($command->to);
 	}
 
 	/**
