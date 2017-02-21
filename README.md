@@ -70,29 +70,29 @@ You won't need to add anything to the aliases section.
 
 The login parameters could be set inside the `.env` file.
 ```php
-    DB_SQLA_HOST     = hostname
-    DB_SQLA_PORT     = 2638
-    DB_SQLA_SERVER   = dbdemo
-    DB_SQLA_DATABASE = dbname
-    DB_SQLA_USERNAME = dbuser
-    DB_SQLA_PASSWORD = dbpwd
+DB_SQLA_HOST     = hostname
+DB_SQLA_PORT     = 2638
+DB_SQLA_SERVER   = dbdemo
+DB_SQLA_DATABASE = dbname
+DB_SQLA_USERNAME = dbuser
+DB_SQLA_PASSWORD = dbpwd
 ```
 
 Just add a new array to the `connections` array in `config/database.php`.
 
 ```php
-    'sqlanywhere' => [
-        'host'        => env('DB_SQLA_HOST', 'localhost'),
-        'port'        => env('DB_SQLA_PORT', '2638'),
-        'dbserver'    => env('DB_SQLA_SERVER', 'dbdemo'),
-        'database'    => env('DB_SQLA_DATABASE', 'dbname'),
-        'username'    => env('DB_SQLA_USERNAME', 'dbuser'),
-        'password'    => env('DB_SQLA_PASSWORD', 'dbpwd'),
-        'charset'     => 'utf8',
-        'prefix'      => '',
-        'auto_commit' => true,
-        'persintent'  => false,
-    ]
+'sqlanywhere' => [
+    'host'        => env('DB_SQLA_HOST', 'localhost'),
+    'port'        => env('DB_SQLA_PORT', '2638'),
+    'dbserver'    => env('DB_SQLA_SERVER', 'dbdemo'),
+    'database'    => env('DB_SQLA_DATABASE', 'dbname'),
+    'username'    => env('DB_SQLA_USERNAME', 'dbuser'),
+    'password'    => env('DB_SQLA_PASSWORD', 'dbpwd'),
+    'charset'     => 'utf8',
+    'prefix'      => '',
+    'auto_commit' => true,
+    'persintent'  => false,
+]
 ```
 
 **Don't forget to update your default database connection.**
