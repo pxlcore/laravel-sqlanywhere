@@ -44,18 +44,21 @@ class SQLAnywhereConnection extends Connection {
 	 */
 	public function select($query, $bindings = array())
 	{
-		return $this->run($query, $bindings, function($me, $query, $bindings)
+		// new version since Laravel 5.4
+		// /vendor/laravel/framework/src/Illuminate/Database/Connection.php
+		//  --> function: select(...)
+		return $this->run($query, $bindings, function($query, $bindings)
 		{
-			if ($me->pretending()) return array();
+			if ($this->pretending()) return array();
 
 			// For select statements, we'll simply execute the query and return an array
 			// of the database result set. Each element in the array will be a single
 			// row from the database table, and will either be an array or objects.
-			$statement = $me->getReadPdo()->prepare($query);
+			$statement = $this->getReadPdo()->prepare($query);
 
-			$statement->execute($me->prepareBindings($bindings));
+			$statement->execute($this->prepareBindings($bindings));
 
-			return $statement->fetchAll($me->getFetchMode());
+			return $statement->fetchAll();
 		});
 	}
 

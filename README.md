@@ -1,6 +1,10 @@
 #Laravel SQLAnyWhere
 
-Adds an Sybase driver to Laravel 5, usable with Fluent and Eloquent.
+Adds an Sybase driver to Laravel 5.4, usable with Fluent and Eloquent.
+
+## Attention
+The latest version only works with Laravel 5.4 and higher. For lower
+version use [version 1.4.1](https://github.com/pxlcore/laravel-sqlanywhere/tree/v1.4.1).
 
 ##Todo
     - Migrate integration is not 100%
@@ -95,4 +99,4 @@ Just add a new array to the `connections` array in `config/database.php`.
 ]
 ```
 
-**Don't forget to update your default database connection.**
+Don't forget to update your default database connection.
