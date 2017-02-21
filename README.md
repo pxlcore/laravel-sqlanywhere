@@ -92,6 +92,7 @@ Just add a new array to the `connections` array in `config/database.php`.
         'prefix'      => '',
         'auto_commit' => true,
         'persintent'  => false,
+    ]
 ```
 
 **Don't forget to update your default database connection.**
