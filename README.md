@@ -69,7 +69,7 @@ You won't need to add anything to the aliases section.
 ##Configuration
 
 The login parameters could be set inside the .env file.
-```
+```php
     DB_SQLA_HOST     = hostname
     DB_SQLA_PORT     = 2638
     DB_SQLA_SERVER   = dbdemo
@@ -80,7 +80,7 @@ The login parameters could be set inside the .env file.
 
 Just add a new array to the `connections` array in `config/database.php`.
 
-```
+```php
     'sqlanywhere' => [
         'host'        => env('DB_SQLA_HOST', 'localhost'),
         'port'        => env('DB_SQLA_PORT', '2638'),
