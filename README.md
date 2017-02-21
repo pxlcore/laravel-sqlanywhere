@@ -9,7 +9,7 @@ Adds an Sybase driver to Laravel 5, usable with Fluent and Eloquent.
 
 ##Installation
 
-Add `pxlcore/laravel-sqlanywhere` as a requirement to composer.json:
+Add `pxlcore/laravel-sqlanywhere` as a requirement to `composer.json`:
 
 ```javascript
 {
@@ -68,7 +68,7 @@ You won't need to add anything to the aliases section.
 
 ##Configuration
 
-The login parameters could be set inside the .env file.
+The login parameters could be set inside the `.env` file.
 ```php
     DB_SQLA_HOST     = hostname
     DB_SQLA_PORT     = 2638
