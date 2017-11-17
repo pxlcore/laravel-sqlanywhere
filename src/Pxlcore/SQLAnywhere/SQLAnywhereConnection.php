@@ -71,16 +71,16 @@ class SQLAnywhereConnection extends Connection {
 	 */
 	public function affectingStatement($query, $bindings = array())
 	{
-		return $this->run($query, $bindings, function($me, $query, $bindings)
+		return $this->run($query, $bindings, function($query, $bindings)
 		{
-			if ($me->pretending()) return 0;
+			if ($this->pretending()) return 0;
 
 			// For update or delete statements, we want to get the number of rows affected
 			// by the statement and return that back to the developer. We'll first need
 			// to execute the statement and then we'll use PDO to fetch the affected.
-			$statement = $me->getPdo()->prepare($query);
+			$statement = $this->getPdo()->prepare($query);
 
-			$statement->execute($me->prepareBindings($bindings));
+			$statement->execute($this->prepareBindings($bindings));
 
 			return $statement->affectedRows();
 		});
