@@ -1,7 +1,7 @@
-<?php namespace Pxlcore\SQLAnywhere;
+<?php namespace emericklaw\SQLAnywhere;
 
 use Illuminate\Database\Connection;
-use \Pxlcore\SQLAnywhereClient;
+use \emericklaw\SQLAnywhereClient;
 
 class SQLAnywhereConnection extends Connection {
 

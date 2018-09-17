@@ -1,10 +1,10 @@
 #Laravel SQLAnyWhere
 
-Adds an Sybase driver to Laravel 5.4, usable with Fluent and Eloquent.
+Adds an Sybase driver to Laravel 5.5, usable with Fluent and Eloquent.
 
 ## Attention
-The latest version only works with Laravel 5.4 and higher. For lower
-version use [version 1.4.1](https://github.com/pxlcore/laravel-sqlanywhere/tree/v1.4.1).
+The latest version only works with Laravel 5.5 and higher. For lower
+version use [version 1.4.1](https://github.com/emericklaw/laravel-sqlanywhere/tree/v1.4.1).
 
 ##Todo
     - Migrate integration is not 100%
@@ -13,41 +13,41 @@ version use [version 1.4.1](https://github.com/pxlcore/laravel-sqlanywhere/tree/
 
 ##Installation
 
-Add `pxlcore/laravel-sqlanywhere` as a requirement to `composer.json`:
+Add `emericklaw/laravel-sqlanywhere` as a requirement to `composer.json`:
 
 ```javascript
 {
     "require": {
         ...
-        "pxlcore/sql-anywhere-client": "dev-master",
-        "pxlcore/laravel-sqlanywhere": "dev-master"
+        "emericklaw/sql-anywhere-client": "dev-master",
+        "emericklaw/laravel-sqlanywhere": "dev-master"
     },
     "repositories": [
         {
             "type": "package",
             "package": {
-                "name": "pxlcore/sql-anywhere-client",
+                "name": "emericklaw/sql-anywhere-client",
                 "version": "dev-master",
                 "dist": {
-                    "url": "https://github.com/pxlcore/sql-anywhere-client/zipball/master",
+                    "url": "https://github.com/emericklaw/sql-anywhere-client/zipball/master",
                     "type": "zip"
                 },
                 "autoload": {
-                    "psr-0": { "Pxlcore": "src/" }
+                    "psr-0": { "emericklaw": "src/" }
                 }
             }
         },
         {
             "type": "package",
             "package": {
-                "name": "pxlcore/laravel-sqlanywhere",
+                "name": "emericklaw/laravel-sqlanywhere",
                 "version": "dev-master",
                 "dist": {
-                    "url": "https://github.com/pxlcore/laravel-sqlanywhere/zipball/master",
+                    "url": "https://github.com/emericklaw/laravel-sqlanywhere/zipball/master",
                     "type": "zip"
                 },
                 "autoload": {
-                    "psr-0": { "Pxlcore\\SQLAnywhere": "src/" }
+                    "psr-0": { "emericklaw\\SQLAnywhere": "src/" }
                 }
             }
         }
@@ -64,7 +64,7 @@ Open up `config/app.php` and find the providers key towards the bottom.
 
  Add the following to the list of providers:
 ```php
-Pxlcore\SQLAnywhere\SQLAnywhereServiceProvider::class,
+emericklaw\SQLAnywhere\SQLAnywhereServiceProvider::class,
 ```
 
 You won't need to add anything to the aliases section.
