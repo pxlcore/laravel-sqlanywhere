@@ -1,4 +1,4 @@
-<?php namespace Pxlcore\SQLAnywhere;
+<?php namespace emericklaw\SQLAnywhere;
 
 use Illuminate\Support\ServiceProvider;
 

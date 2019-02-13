@@ -1,4 +1,4 @@
-<?php namespace Pxlcore\SQLAnywhere;
+<?php namespace emericklaw\SQLAnywhere;
 
 use Illuminate\Database\Query\Grammars\Grammar;
 use Illuminate\Database\Query\Builder;

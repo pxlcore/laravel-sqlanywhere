@@ -1,11 +1,11 @@
 {
-    "name": "pxlcore/laravel-sqlanywhere",
+    "name": "emericklaw/laravel-sqlanywhere",
     "description": "A Sybase driver based Eloquent model and Query builder for Laravel 5. Based on Cagartner module.",
     "keywords": ["laravel","eloquent","sybase","sqlanywhere","database","model"],
     "authors": [
         {
-            "name": "Stephan Rennert",
-            "homepage": "https://github.com/pxlcore/"
+            "name": "Matthew Emerick-Law",
+            "homepage": "https://github.com/emericklaw/"
         }
     ],
     "license" : "MIT",
@@ -13,7 +13,7 @@
         "php": ">=5.5.9",
         "illuminate/support": "4.*",
         "illuminate/database": "4.*",
-        "pxlcore/sql-anywhere-client": "dev-master"
+        "emericklaw/sql-anywhere-client": "dev-master"
     },
     "require-dev": {
         "orchestra/testbench": "2.1.*",
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Pxlcore\\SQLAnywhere": "src/"
+            "emericklaw\\SQLAnywhere": "src/"
         }
     }
 }

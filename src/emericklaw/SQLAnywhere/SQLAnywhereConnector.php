@@ -1,8 +1,8 @@
-<?php namespace Pxlcore\SQLAnywhere;
+<?php namespace emericklaw\SQLAnywhere;
 
 use Illuminate\Database\Connectors\Connector;
 use Illuminate\Database\Connectors\ConnectorInterface;
-use \Pxlcore\SQLAnywhereClient;
+use \emericklaw\SQLAnywhereClient;
 
 class SQLAnywhereConnector extends Connector implements ConnectorInterface {
 
