@@ -11,12 +11,12 @@
     "license" : "MIT",
     "require": {
         "php": ">=7.1",
-        "illuminate/support": "4.*",
-        "illuminate/database": "4.*",
+        "illuminate/support": "5.*",
+        "illuminate/database": "5.*",
         "emericklaw/sql-anywhere-client": "^2.0.0"
     },
     "require-dev": {
-        "orchestra/testbench": "2.1.*",
+        "orchestra/testbench": "3.7.*",
         "mockery/mockery": "*"
     },
     "autoload": {
