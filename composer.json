@@ -10,10 +10,10 @@
     ],
     "license" : "MIT",
     "require": {
-        "php": ">=5.5.9",
+        "php": ">=7.1",
         "illuminate/support": "4.*",
         "illuminate/database": "4.*",
-        "emericklaw/sql-anywhere-client": "dev-master"
+        "emericklaw/sql-anywhere-client": "^2.0.0"
     },
     "require-dev": {
         "orchestra/testbench": "2.1.*",
