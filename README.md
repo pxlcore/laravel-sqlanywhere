@@ -1,17 +1,18 @@
-#Laravel SQLAnyWhere
+# Laravel SQLAnyWhere
 
-Adds an Sybase driver to Laravel 5.4, usable with Fluent and Eloquent.
+Adds a Sybase driver to Laravel 5.4, usable with Fluent and Eloquent.
 
 ## Attention
-The latest version only works with Laravel 5.4 and higher. For lower
-version use [version 1.4.1](https://github.com/pxlcore/laravel-sqlanywhere/tree/v1.4.1).
+The latest version only works with Laravel 5.4 and higher. For earlier
+versions use [version 1.4.1](https://github.com/pxlcore/laravel-sqlanywhere/tree/v1.4.1).
 
-##Todo
-    - Migrate integration is not 100%
-    - Find bugs
+## Todo
+
+- [ ] Migrate integration is not 100%
+- [ ] Find bugs
 
 
-##Installation
+## Installation
 
 Add `pxlcore/laravel-sqlanywhere` as a requirement to `composer.json`:
 
@@ -70,7 +71,7 @@ Pxlcore\SQLAnywhere\SQLAnywhereServiceProvider::class,
 You won't need to add anything to the aliases section.
 
 
-##Configuration
+## Configuration
 
 The login parameters could be set inside the `.env` file.
 ```php
