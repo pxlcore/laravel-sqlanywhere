@@ -53,10 +53,13 @@ class SQLAnywhereConnector extends Connector implements ConnectorInterface {
         // Sample: UID=test;PWD=test;ENG=dbserv;DBN=dbname;COMMLINKS=TCPIP{HOST=192.168.100.100:2638}
         $dsn = "uid={$username};pwd={$password};dbn={$database};commlinks=tcpip{host={$host}:{$port}}";
         if (isset($charset)) {
-            $dsn.= ";charset={$charset}";
+            $dsn .= ";charset={$charset}";
         }
         if (isset($dbserver)) {
-            $dsn.= ";ENG={$dbserver}";
+            $dsn .= ";ENG={$dbserver}";
+        }
+        if (isset($appinfo)) {
+            $dsn .= ";APP={$appinfo}";
         }
 
 		return $dsn;
