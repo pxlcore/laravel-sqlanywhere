@@ -1,5 +1,6 @@
 <?php namespace Pxlcore\SQLAnywhere;
 
+use Illuminate\Support\Arr;
 use Illuminate\Database\Connectors\Connector;
 use Illuminate\Database\Connectors\ConnectorInterface;
 use \Pxlcore\SQLAnywhereClient;
@@ -27,10 +28,10 @@ class SQLAnywhereConnector extends Connector implements ConnectorInterface {
 	 */
 	public function createConnection($dsn, array $config, array $options)
 	{
-		$autocommit = array_get($config, 'autocommit');
-		$persintent = array_get($config, 'persintent');
+		$autocommit = Arr::get($config, 'autocommit');
+		$persistent = Arr::get($config, 'persistent');
 
-		return new SQLAnywhereClient($this->getDsn($config), $autocommit, $persintent);
+		return new SQLAnywhereClient($this->getDsn($config), $autocommit, $persistent);
 	}
 
 	/**
@@ -52,10 +53,13 @@ class SQLAnywhereConnector extends Connector implements ConnectorInterface {
         // Sample: UID=test;PWD=test;ENG=dbserv;DBN=dbname;COMMLINKS=TCPIP{HOST=192.168.100.100:2638}
         $dsn = "uid={$username};pwd={$password};dbn={$database};commlinks=tcpip{host={$host}:{$port}}";
         if (isset($charset)) {
-            $dsn.= ";charset={$charset}";
+            $dsn .= ";charset={$charset}";
         }
         if (isset($dbserver)) {
-            $dsn.= ";ENG={$dbserver}";
+            $dsn .= ";ENG={$dbserver}";
+        }
+        if (isset($appinfo)) {
+            $dsn .= ";APP={$appinfo}";
         }
 
 		return $dsn;

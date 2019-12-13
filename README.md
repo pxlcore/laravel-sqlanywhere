@@ -93,10 +93,11 @@ Just add a new array to the `connections` array in `config/database.php`.
     'database'    => env('DB_SQLA_DATABASE', 'dbname'),
     'username'    => env('DB_SQLA_USERNAME', 'dbuser'),
     'password'    => env('DB_SQLA_PASSWORD', 'dbpwd'),
+    'appinfo'     => env('DB_SQLA_APPINFO', ''),
     'charset'     => 'utf8',
     'prefix'      => '',
     'auto_commit' => true,
-    'persintent'  => false,
+    'persistent'  => false,
 ]
 ```
 
