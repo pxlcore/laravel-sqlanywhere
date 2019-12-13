@@ -96,7 +96,7 @@ Just add a new array to the `connections` array in `config/database.php`.
     'charset'     => 'utf8',
     'prefix'      => '',
     'auto_commit' => true,
-    'persintent'  => false,
+    'persistent'  => false,
 ]
 ```
 

@@ -29,9 +29,9 @@ class SQLAnywhereConnector extends Connector implements ConnectorInterface {
 	public function createConnection($dsn, array $config, array $options)
 	{
 		$autocommit = Arr::get($config, 'autocommit');
-		$persintent = Arr::get($config, 'persintent');
+		$persistent = Arr::get($config, 'persistent');
 
-		return new SQLAnywhereClient($this->getDsn($config), $autocommit, $persintent);
+		return new SQLAnywhereClient($this->getDsn($config), $autocommit, $persistent);
 	}
 
 	/**
