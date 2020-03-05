@@ -1,9 +1,9 @@
 #Laravel SQLAnyWhere
 
-Adds an Sybase driver to Laravel 5.5, usable with Fluent and Eloquent.
+Adds an Sybase driver to Laravel 5.7 and above (tested with 5.7, 6.0 and 7.0) usable with Fluent and Eloquent.
 
 ## Attention
-The latest version only works with Laravel 5.5 and higher. For lower
+The latest version only works with Laravel 5.7 and higher. For lower
 version use [version 1.4.1](https://github.com/emericklaw/laravel-sqlanywhere/tree/v1.4.1).
 
 ##Todo
