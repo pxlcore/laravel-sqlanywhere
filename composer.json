@@ -11,8 +11,8 @@
     "license" : "MIT",
     "require": {
         "php": ">=7.1",
-        "illuminate/support": "5.*",
-        "illuminate/database": "5.*",
+        "illuminate/support": ">=5.*",
+        "illuminate/database": ">=5.*",
         "emericklaw/sql-anywhere-client": "^2.0.0"
     },
     "require-dev": {
