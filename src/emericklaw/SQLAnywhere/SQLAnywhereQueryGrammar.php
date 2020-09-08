@@ -103,4 +103,20 @@ class SQLAnywhereQueryGrammar extends Grammar {
 	{
 		return 'start at '.((int) $offset+1);
 	}
+
+	/**
+	 * Compile the "random" portions of the query.
+	 *
+	 * @param  \Illuminate\Database\Query\Builder  $query
+	 * @param  int  $seed
+	 * @return string
+	 */
+	public function compileRandom($seed)
+	{
+		if (is_int($seed)) {
+			return 'rand('.((int) $seed).')';
+		} else {
+			return 'rand()';
+		}
+	}
 }
